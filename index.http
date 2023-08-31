@@ -1,0 +1,15 @@
+GET https://nalog.ru
+
+###
+
+GET https://jsonplaceholder.typicode.com/todos/
+
+###
+
+POST  https://jsonplaceholder.typicode.com/posts/
+
+Content-Type: application/json 
+{
+    "name": "Oleg",
+    "text": "котики"
+}
