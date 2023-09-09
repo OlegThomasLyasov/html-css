@@ -1,7 +1,7 @@
 body {
     margin: 0;
-    background: var(--020-a-18, #020A18);
-    font-family: Open Sans;
+    background-color:  #020A18;
+    font-family: 'Open Sans', sans-serif;
 }
 .nav {
   display: flex;
@@ -15,27 +15,24 @@ body {
   justify-content: center;
   align-items: center;
   height: 100px;
+  background-color: #020b1b;
 }
-a {
+.header a {
   text-decoration: none;
   color: white;
   font-size: 16px;
-  font-family: Open Sans;
   line-height: normal;
   font-weight: 600;
 }
-/* .title {
-  color: #222222;
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: bold;
-
-} */
 .intro {
   margin-top: 160px;
   display: flex;
-  justify-content: center;
   gap: 128px;
+}
+.center {
+  width: 1146px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .upperTitle {
   color: #3A68B8;
@@ -61,8 +58,13 @@ a {
   color: #FFF;
   opacity: 0.7;
   margin-top: 40px;
+  width: 558px;
 }
-
+.buttonWrapper {
+  display: flex;
+  margin-top: 50px;
+  column-gap: 20px;
+}
 .button {
   padding: 15px 30px;
   border-radius: 5px;
@@ -81,8 +83,7 @@ a {
 .cards {
   margin-top: 87px;
   display: flex;
-  justify-content: center;
-  gap: 71.36px;
+  justify-content: space-between;
 }
 .imageText {
   margin-top: 157px;
@@ -164,20 +165,72 @@ a {
   color: #FFFFFF;
   opacity: 0.7;
 }
-@media screen and (max-width: 1024px) {
+.marg-bott {
+  margin-bottom: 221px;
+}
+.footer {
+  height: 250px;
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer-title {
+  color: #FFF;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0 0 33px;
+}
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.footer-desc {
+  color: #FFF;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 100;
+  line-height: normal;
+  opacity: 0.6;
+  width: 261px;
+}
+.footer-socials {
+  margin-top: 24px;
+  display: flex;
+  gap: 24px;
+}
+.footer-link {
+  color: #FFF;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+
+@media (min-width: 849px) and (max-width: 1439px) { 
   .center {
-    margin-left: 16px;
-    margin-right: 16px;
+    width: 768px;
   }
-  .intro, .imageText{
-    display: flex;
+  .intro, .imageText {
     flex-direction: column;
     align-items: center;
   }
   .cards {
-    display: flex;
     flex-wrap: wrap;
     gap: 32px;
+    justify-content: center;
+    width: 600px;
+  }
+  .leftText {
+    width: 484px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .items {
     display: flex;
@@ -185,39 +238,64 @@ a {
     align-items: center;
     gap: 32px;
   }
-  .advantages__item_big {
-    display: none;
+  .advantages__item {
+    width: 362px;
+  }
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 391px;
+    gap: 30px;
+  }
+}
+@media (min-width: 320px) and (max-width: 848px) {
+  .nav {
+    gap: 16px;
+  }
+  .desc {
+    width: auto;
+  }
+  .center {
+    width: 343px;
+  }
+  .marg-bott {
+    margin-bottom: 113px;
+  }
+  .intro, .imageText {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
   }
   .buttonWrapper {
     display: flex;
     flex-direction: column;
-    gap: 24px;
     align-items: center;
-    margin-top: 40px;
+    gap: 24px;
   }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .center {
-    width: 604px;
-    margin-left: auto;
+  .buttonWrapperText {
     margin-right: auto;
-  }
-  .advantages__item {
-    width: 362px;
-  }
-}
-@media screen and (min-width: 1439px) {
-  .center {
-    width: 1146px;
     margin-left: auto;
-    margin-right: auto;
   }
-}
-@media screen and (min-width: 768px) {
-  .buttonWrapper {
-    margin-top: 50px;
+  .buttonWrapper .button {
+    width: fit-content;
+  }
+  .cards {
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+  }
+  .items {
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
   }
-}
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: 427px;
+    padding-bottom: 64px;
+    align-items: center;
+  }
+} 
